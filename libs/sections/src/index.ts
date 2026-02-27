@@ -8,6 +8,15 @@ export { RoomCard, RoomGrid } from './components/RoomCard'
 export { FactsBox } from './components/FactsBox'
 export { Badge, BadgeGroup } from './components/Badge'
 export { Footer } from './components/Footer'
+export { GalleryLightbox } from './components/GalleryLightbox'
+export { SearchFilters, type Filters } from './components/SearchFilters'
 
 // Icons (re-export for direct use if needed)
-export { AmenityIconComponent, FactIconComponent } from './components/Icons'
+export {
+  AmenityIconComponent,
+  FactIconComponent,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  AreaIcon,
+  UsersIcon,
+} from './components/Icons'
