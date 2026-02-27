@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco',
+      'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    color: #111;
+    background: #fff;
+  }
+
+  ::selection {
+    background: #1a1a1a;
+    color: #fff;
+  }
+}
