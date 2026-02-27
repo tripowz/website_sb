@@ -3,8 +3,10 @@ import type { User } from '../data/users'
 import { mockUsers } from '../data/users'
 import { mockBookings } from '../data/bookings'
 
+type AuthUser = Omit<User, 'bookings'> & { bookings: any[] }
+
 interface AuthContextType {
-  user: (User & { bookings: any[] }) | null
+  user: AuthUser | null
   isLoggedIn: boolean
   isLoading: boolean
   login: (email: string, password: string) => Promise<void>
@@ -15,7 +17,7 @@ interface AuthContextType {
 const STORAGE_KEY = 'auth_user'
 
 export function useAuth(): AuthContextType {
-  const [user, setUser] = useState<(User & { bookings: any[] }) | null>(null)
+  const [user, setUser] = useState<AuthUser | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
   // Initialize from localStorage
@@ -104,7 +106,7 @@ export function useAuth(): AuthContextType {
 }
 
 // Helper to enrich user with booking details
-function enrichUserWithBookings(user: User) {
+function enrichUserWithBookings(user: User): AuthUser {
   const bookingDetails = mockBookings.filter((b) =>
     user.bookings.includes(b.id),
   )

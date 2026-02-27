@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Room } from '@smartbooking/booking'
+import type { Room, AmenityIcon } from '@smartbooking/booking'
 
 interface SearchFiltersProps {
   rooms: Room[]
@@ -10,7 +10,7 @@ interface SearchFiltersProps {
 export interface Filters {
   priceMin: number
   priceMax: number
-  amenities: string[]
+  amenities: AmenityIcon[]
   sortBy: 'price-asc' | 'price-desc' | 'rating' | 'popularity'
 }
 
@@ -23,9 +23,9 @@ export function SearchFilters({ rooms, onFilterChange, currentFilters }: SearchF
   // Get unique amenities
   const allAmenities = Array.from(
     new Set(rooms.flatMap((r) => r.amenities.map((a) => a.icon))),
-  )
+  ) as AmenityIcon[]
 
-  const handleAmenityToggle = (icon: string) => {
+  const handleAmenityToggle = (icon: AmenityIcon) => {
     const updated = currentFilters.amenities.includes(icon)
       ? currentFilters.amenities.filter((a) => a !== icon)
       : [...currentFilters.amenities, icon]

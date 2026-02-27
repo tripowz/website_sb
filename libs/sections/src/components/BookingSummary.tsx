@@ -1,7 +1,7 @@
 import React from 'react'
 import { formatPrice } from '@smartbooking/booking'
 
-interface BookingSummaryData {
+export interface BookingSummaryData {
   roomName: string
   roomImage: string
   hotelName: string
