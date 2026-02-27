@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd apps/template-ultra-modern && npm install && npm run build",
-  "outputDirectory": "apps/template-ultra-modern/dist",
-  "installCommand": "npm install",
-  "framework": null
-}
