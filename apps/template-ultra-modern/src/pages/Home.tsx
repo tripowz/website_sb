@@ -21,46 +21,41 @@ export function Home() {
     if (search.checkIn) params.set('checkIn', search.checkIn.toISOString().split('T')[0])
     if (search.checkOut) params.set('checkOut', search.checkOut.toISOString().split('T')[0])
     params.set('guests', search.guests.toString())
-    navigate(`/search?${params.toString()}`)
+    navigate(`/rooms?${params.toString()}`)
   }, [search, navigate])
 
-  const handleBook = useCallback((roomId: string) => {
-    navigate(`/rooms/${roomId}`)
-  }, [navigate])
+  const handleBook = useCallback(
+    (roomId: string) => {
+      navigate(`/rooms/${roomId}`)
+    },
+    [navigate],
+  )
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Global promo banner */}
+    <div className="min-h-screen bg-[var(--color-bg)]">
       <GlobalBanner data={demoBanner} />
-
-      {/* Hero section */}
       <HeroSection
         image={demoHotel.heroImage}
         hotelName={demoHotel.name}
         tagline={demoHotel.tagline}
         stars={demoHotel.stars}
       />
-
-      {/* Floating booking bar */}
       <BookingBar
         search={search}
         onFieldChange={updateField}
         onSearch={handleSearch}
         isValid={isValid}
       />
-
-      {/* Room cards grid */}
-      <RoomGrid rooms={demoHotel.rooms} onBook={handleBook} />
-
-      {/* Hotel facts */}
-      <FactsBox facts={demoHotel.facts} />
-
-      {/* Guest reviews carousel */}
-      <ReviewCarousel
-        reviews={demoReviews}
-        hotelRating={demoHotel.rating}
-        reviewsCount={demoHotel.reviewsCount}
-      />
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 space-y-20">
+        <RoomGrid rooms={demoHotel.rooms} onBook={handleBook} />
+        <FactsBox facts={demoHotel.facts} />
+        <ReviewCarousel
+          reviews={demoReviews}
+          hotelRating={demoHotel.rating}
+          reviewsCount={demoHotel.reviewsCount}
+        />
+      </section>
     </div>
   )
 }
+

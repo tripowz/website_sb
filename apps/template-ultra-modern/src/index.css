@@ -15,12 +15,62 @@
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco',
       'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-    color: #111;
-    background: #fff;
+    color: var(--color-text);
+    background: var(--color-bg);
   }
 
   ::selection {
     background: #1a1a1a;
     color: #fff;
+  }
+
+  :root {
+    --color-bg: #f6f4f1;
+    --color-surface: #fcfaf7;
+    --color-surface-elevated: #ffffff;
+    --color-text: #151515;
+    --color-muted: #8c8577;
+    --color-border-subtle: rgba(15, 10, 0, 0.08);
+    --color-accent: #3a4a3a; /* глубокий оливковый */
+    --color-accent-soft: #d8d2c3;
+    --radius-lg: 18px;
+    --shadow-soft: 0 18px 45px rgba(15, 10, 0, 0.12);
+  }
+
+  [data-theme='minimal'] {
+    --color-bg: #f6f4f1;
+    --color-surface: #fcfaf7;
+    --color-surface-elevated: #ffffff;
+    --color-text: #151515;
+    --color-muted: #8c8577;
+    --color-accent: #3a4a3a;
+  }
+
+  [data-theme='luxury'] {
+    --color-bg: #f3efe8;
+    --color-surface: #faf6ee;
+    --color-surface-elevated: #ffffff;
+    --color-text: #161616;
+    --color-muted: #7b7465;
+    --color-accent: #1f2623;
+    --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.16);
+  }
+
+  [data-theme='dark'] {
+    --color-bg: #111111;
+    --color-surface: #181818;
+    --color-surface-elevated: #1f1f1f;
+    --color-text: #f5f5f5;
+    --color-muted: #9ca3af;
+    --color-accent: #e5e7eb;
+  }
+
+  [data-theme='modern'] {
+    --color-bg: #f5f5f4;
+    --color-surface: #fafafa;
+    --color-surface-elevated: #ffffff;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-accent: #111827;
   }
 }

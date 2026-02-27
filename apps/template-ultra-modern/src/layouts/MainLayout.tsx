@@ -6,14 +6,11 @@ import { demoHotel } from '../data/demo'
 
 export function MainLayout() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
       <Navigation />
-
-      {/* Add padding-top for fixed navigation */}
       <main className="pt-16">
         <Outlet />
       </main>
-
       <Footer
         hotelName={demoHotel.name}
         address={demoHotel.address}

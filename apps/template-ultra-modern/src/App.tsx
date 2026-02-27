@@ -11,6 +11,9 @@ import { Contact } from './pages/Contact'
 import { Reviews } from './pages/Reviews'
 import { Account } from './pages/Account'
 import { MyBookings } from './pages/MyBookings'
+import { Amenities } from './pages/Amenities'
+import { Location } from './pages/Location'
+import { Policies } from './pages/Policies'
 
 export default function App() {
   return (
@@ -19,14 +22,17 @@ export default function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/rooms/:roomId" element={<RoomDetail />} />
-          <Route path="/search" element={<SearchResults />} />
+          <Route path="/rooms" element={<SearchResults />} />
           <Route path="/booking" element={<BookingFlow />} />
           <Route path="/confirmation/:bookingId" element={<Confirmation />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contacts" element={<Contact />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/account" element={<Account />} />
           <Route path="/account/bookings" element={<MyBookings />} />
+          <Route path="/amenities" element={<Amenities />} />
+          <Route path="/location" element={<Location />} />
+          <Route path="/policies" element={<Policies />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

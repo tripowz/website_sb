@@ -14,6 +14,8 @@ export { Stepper } from './components/Stepper'
 export { BookingSummary, type BookingSummaryData } from './components/BookingSummary'
 export { ReviewCard } from './components/ReviewCard'
 export { ReviewCarousel } from './components/ReviewCarousel'
+export { AvailabilityBlock } from './components/AvailabilityBlock'
+export { RatesBlock, type RateOption } from './components/RatesBlock'
 
 // Icons (re-export for direct use if needed)
 export {
