@@ -12,6 +12,8 @@ export { GalleryLightbox } from './components/GalleryLightbox'
 export { SearchFilters, type Filters } from './components/SearchFilters'
 export { Stepper } from './components/Stepper'
 export { BookingSummary, type BookingSummaryData } from './components/BookingSummary'
+export { ReviewCard } from './components/ReviewCard'
+export { ReviewCarousel } from './components/ReviewCarousel'
 
 // Icons (re-export for direct use if needed)
 export {

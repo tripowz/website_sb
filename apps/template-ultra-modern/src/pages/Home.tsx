@@ -7,9 +7,10 @@ import {
   BookingBar,
   RoomGrid,
   FactsBox,
+  ReviewCarousel,
 } from '@smartbooking/sections'
 
-import { demoHotel, demoBanner } from '../data/demo'
+import { demoHotel, demoBanner, demoReviews } from '../data/demo'
 
 export function Home() {
   const { search, updateField, isValid } = useBookingSearch()
@@ -53,6 +54,13 @@ export function Home() {
 
       {/* Hotel facts */}
       <FactsBox facts={demoHotel.facts} />
+
+      {/* Guest reviews carousel */}
+      <ReviewCarousel
+        reviews={demoReviews}
+        hotelRating={demoHotel.rating}
+        reviewsCount={demoHotel.reviewsCount}
+      />
     </div>
   )
 }

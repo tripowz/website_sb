@@ -6,16 +6,11 @@ import { RoomDetail } from './pages/RoomDetail'
 import { SearchResults } from './pages/SearchResults'
 import { BookingFlow } from './pages/BookingFlow'
 import { Confirmation } from './pages/Confirmation'
-
-// Placeholder pages for Phase 3+ (to be implemented)
-function ComingSoon({ title }: { title: string }) {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-      <h1 className="text-3xl font-semibold text-gray-900">{title}</h1>
-      <p className="text-gray-500">Coming soon...</p>
-    </div>
-  )
-}
+import { About } from './pages/About'
+import { Contact } from './pages/Contact'
+import { Reviews } from './pages/Reviews'
+import { Account } from './pages/Account'
+import { MyBookings } from './pages/MyBookings'
 
 export default function App() {
   return (
@@ -27,11 +22,11 @@ export default function App() {
           <Route path="/search" element={<SearchResults />} />
           <Route path="/booking" element={<BookingFlow />} />
           <Route path="/confirmation/:bookingId" element={<Confirmation />} />
-          <Route path="/about" element={<ComingSoon title="About Us" />} />
-          <Route path="/contact" element={<ComingSoon title="Contact Us" />} />
-          <Route path="/reviews" element={<ComingSoon title="Reviews" />} />
-          <Route path="/account" element={<ComingSoon title="Account" />} />
-          <Route path="/account/bookings" element={<ComingSoon title="My Bookings" />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/account/bookings" element={<MyBookings />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
