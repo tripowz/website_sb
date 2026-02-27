@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "node ./log-build-env.mjs && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
