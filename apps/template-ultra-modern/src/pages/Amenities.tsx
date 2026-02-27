@@ -1,15 +1,13 @@
 import React from 'react'
-import { demoHotel } from '../data/demo'
+import { demoFacilities, demoHotel } from '../data/demo'
 
 export function Amenities() {
-  const amenities = demoHotel.rooms[0]?.amenities ?? []
-
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24">
         <header className="mb-16 max-w-2xl">
           <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--color-muted)] mb-4">
-            Сервисы и удобства
+            Услуги отеля
           </p>
           <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight text-[var(--color-text)] mb-4">
             Тихая роскошь
@@ -17,28 +15,28 @@ export function Amenities() {
             в деталях сервиса.
           </h1>
           <p className="text-lg text-[var(--color-muted)]">
-            Тёплые текстуры, мягкий свет и сервис, который остаётся почти незаметным. Всё настроено
-            на то, чтобы вы могли просто быть.
+            Спа, гастрономия, пространства для работы и тишины. Услуги, которые поддерживают ваш
+            привычный ритм — без лишней демонстративности.
           </p>
         </header>
 
         <section className="grid gap-12 lg:grid-cols-3">
           <div className="space-y-8 lg:col-span-2">
             <div className="grid gap-6 sm:grid-cols-2">
-              {amenities.map((amenity) => (
+              {demoFacilities.map((facility) => (
                 <div
-                  key={amenity.id}
+                  key={facility.id}
                   className="rounded-2xl border border-[color:var(--color-border-subtle)] bg-[var(--color-surface)] p-6"
                 >
                   <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-muted)] mb-2">
-                    {amenity.icon}
+                    {facility.icon}
                   </p>
                   <h3 className="text-lg font-medium text-[var(--color-text)] mb-2">
-                    {amenity.label}
+                    {facility.name}
                   </h3>
                   <p className="text-sm text-[var(--color-muted)]">
-                    Спокойный, продуманный сервис без визуального шума. Удобство, которое ощущается,
-                    а не демонстрируется.
+                    Пространство с продуманным сервисом и вниманием к деталям. Услуга, которая
+                    поддерживает ощущение спокойствия и заботы.
                   </p>
                 </div>
               ))}

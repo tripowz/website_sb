@@ -17,10 +17,9 @@ export function Navigation() {
   const navItems = [
     { label: 'Главная', href: '/' },
     { label: 'Номера', href: '/rooms' },
-    { label: 'Удобства', href: '/amenities' },
-    { label: 'Локация', href: '/location' },
-    { label: 'Политики', href: '/policies' },
-    { label: 'Контакты', href: '/contacts' },
+    { label: 'Услуги', href: '/services' },
+    { label: 'О нас / Контакты', href: '/about' },
+    { label: 'Галерея', href: '/gallery' },
   ]
 
   return (
@@ -57,7 +56,7 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Account / Login */}
+          {/* Theme switcher */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-2 rounded-full border border-[color:var(--color-border-subtle)] bg-[var(--color-surface-elevated)] px-3 py-1.5">
               {themes.map((value) => (
@@ -80,30 +79,6 @@ export function Navigation() {
                 </button>
               ))}
             </div>
-            <Link
-              to="/account"
-              className="
-                text-[10px] uppercase tracking-[0.18em] font-medium
-                text-[var(--color-muted)] hover:text-[var(--color-text)]
-                transition-colors
-              "
-            >
-              Аккаунт
-            </Link>
-            <Link
-              to="/account"
-              className="
-                rounded-full border border-[color:var(--color-border-subtle)]
-                bg-[var(--color-surface-elevated)] px-5 py-2
-                text-[10px] font-medium uppercase tracking-[0.18em]
-                text-[var(--color-text)]
-                transition-all duration-200
-                hover:border-[color:var(--color-accent)] hover:text-[var(--color-accent)]
-                active:scale-[0.98]
-              "
-            >
-              Book
-            </Link>
           </div>
         </div>
       </div>
