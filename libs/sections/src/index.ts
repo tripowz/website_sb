@@ -10,6 +10,8 @@ export { Badge, BadgeGroup } from './components/Badge'
 export { Footer } from './components/Footer'
 export { GalleryLightbox } from './components/GalleryLightbox'
 export { SearchFilters, type Filters } from './components/SearchFilters'
+export { Stepper } from './components/Stepper'
+export { BookingSummary, type BookingSummaryData } from './components/BookingSummary'
 
 // Icons (re-export for direct use if needed)
 export {

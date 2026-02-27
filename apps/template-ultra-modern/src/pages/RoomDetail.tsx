@@ -194,6 +194,7 @@ export function RoomDetail() {
 
               {/* CTA */}
               <button
+                onClick={() => navigate(`/booking?roomId=${room.id}`)}
                 disabled={!room.available}
                 className="
                   w-full rounded-xl bg-gray-900 text-white py-3
