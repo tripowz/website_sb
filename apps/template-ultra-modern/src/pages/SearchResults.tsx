@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import { RoomCard } from '@smartbooking/sections'
-import { SearchFilters, type Filters } from '@smartbooking/sections/src/components/SearchFilters'
+import { RoomCard, SearchFilters, type Filters } from '@smartbooking/sections'
 import { demoHotel } from '../data/demo'
 
 export function SearchResults() {

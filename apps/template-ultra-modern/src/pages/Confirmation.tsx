@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom'
-import QRCode from 'qrcode.react'
+import { QRCodeSVG } from 'qrcode.react'
 import { demoHotel } from '../data/demo'
 
 export function Confirmation() {
@@ -137,7 +137,7 @@ export function Confirmation() {
               QR код для check-in
             </p>
             <div className="p-4 bg-white border-2 border-gray-200 rounded-lg">
-              <QRCode value={bookingId || 'booking-ref'} size={200} level="H" />
+              <QRCodeSVG value={bookingId || 'booking-ref'} size={200} level="H" />
             </div>
             <p className="text-xs text-gray-500 text-center max-w-xs">
               Покажите этот код при заезде для ускоренной регистрации
